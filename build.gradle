@@ -27,7 +27,7 @@ repositories {
 
 application {
     mainClassName = "com.ecommerce.Application"
-    applicationDefaultJvmArgs = ["-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005","-Xverify:none"]
+//    applicationDefaultJvmArgs = ["-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005","-Xverify:none"]
 }
 
 sourceCompatibility = 1.8
@@ -66,6 +66,8 @@ dependencies {
     implementation('com.fasterxml.jackson.core:jackson-core:2.9.8')
     implementation('com.fasterxml.jackson.core:jackson-databind:2.9.8')
     implementation('com.fasterxml.jackson.core:jackson-annotations:2.9.8')
+
+    compile group: 'org.apache.kafka', name: 'kafka-clients', version: '2.3.0'
 
     //test dependencies
     testImplementation("org.springframework.boot:spring-boot-starter-test")
